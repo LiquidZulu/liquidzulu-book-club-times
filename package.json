@@ -1,0 +1,13 @@
+{
+  "name": "liquidzulu-book-club-times",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/LiquidZulu/liquidzulu-book-club-times.git",
+  "author": "LiquidZulu <liquidzulu@pm.me>",
+  "license": "unlicense",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "typescript": "^5.1.3"
+  }
+}

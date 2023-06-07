@@ -1,0 +1,25 @@
+#+title: THIS REPO IS A WORK IN PROGRESS DO NOT PUSH liquidzulu book club times
+
+This is a repo which will hold the preferred times for meeting
+
+* How To Add A Time
+
+To add your preferred times to the repo you must follow these steps (if you do not know how to use git, then [[https://desktop.github.com/][Github Desktop]] might be easier):
+1. [[https://github.com/git-guides/git-pull][Pull]] the repo to your local machine
+2. [[https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository][Create a new branch]] called =add-yourname= and
+3. Add =yourname.csv= to =src/times= and add acceptable meeting times for you, following the [[Meeting Times Format]]
+4. Publish your branch as a [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][fork]] and [[https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request][create a pull request]] for your fork.
+
+* Meeting Times Format
+The format of =yourname.csv= in short is as follows: =day(s)/time(s),day(s)/time(s),...=. The accepted days are:
++ =mon=
++ =tue=
++ =wed=
++ =thu=
++ =fri=
++ =sat=
++ =sun=
+
+The times are to be [[https://en.wikipedia.org/wiki/Coordinated_Universal_Time][UTC]] 24 hour time, with no colon. So 3pm is to be rendered as =1500= and 3am as =0300= (or =300=). Multiple days or times can be encoded by hyphenating (these shall be called "stretches"), so if you want to say that you will be free every day at 3pm until 4:30pm UTC except for Wednesday you could encode that with the following: =mon-tue/1500-1630,thu-sun/1500-1630=. A given stretch must go from an earlier point to a later point, so do not do =thu-mon= or =1700-0800=.
+
+You do not have to use a stretch, if you are only available on Mondays you can just do =mon/...=. Also the times are going to be interpreted as being the start time of the meeting, so =wed/1500= means that you are available to have the meeting start at 3pm UTC on Wednesdays.
